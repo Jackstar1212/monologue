@@ -1,0 +1,644 @@
+/* 
+ * 统一变量定义
+ */
+:root {
+    --highlight-color: rgba(0, 0, 0, 0.05);
+    --shadow-color: rgba(0, 0, 0, 0.02);
+    --transition-duration: 0.3s;
+    --border-radius: 5px;
+    --box-shadow: 0 0 5px var(--shadow-color);
+    --title-text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2);
+    --title-hover-lift: translateY(-2px);
+    --title-hover-color: #2a6496;
+}
+
+/* 
+ * 字体定义部分
+ * 定义自定义中文字体 "Source Han Serif CN"（思源宋体）
+ */
+@font-face {
+    font-family: 'Source Han Serif CN';
+    src: url('./monologue/SourceHanSerifCN-VF.otf.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* 
+ * 基础HTML样式 
+ */
+html {
+    font-size: 18px;
+}
+
+/* 
+ * 全局页面样式
+ */
+html, body {
+    margin: auto;
+    background: #fefefe;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* 
+ * 主体内容样式
+ */
+body {
+    font-family: "Source Han Serif CN", "Vollkorn", Palatino, Times, serif;
+    color: #333;
+    line-height: 1.4;
+    text-align: justify;
+}
+
+/* 
+ * 编辑器内容区域样式
+ */
+#write {
+    max-width: 960px;
+    margin: 0 auto;
+    margin-bottom: 2em;
+    line-height: 1.5;
+    padding-top: 40px;
+}
+
+/* 
+ * 大屏幕适配
+ */
+@media only screen and (min-width: 1400px) {
+    #write {
+        max-width: 1100px;
+    }
+}
+
+/* 
+ * 打印样式
+ */
+@media print {
+    html {
+        font-size: 13px;
+    }
+}
+
+/* 
+ * ============================================
+ * 排版样式 (Typography)
+ * ============================================
+ */
+
+/* 标题基础样式 */
+h1, h2, h3, h4, h5, h6 {
+    transition: all var(--transition-duration) ease;
+    display: block; /* 确保所有标题都是块级元素 */
+    line-height: 1.2;
+    position: relative;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+}
+
+/* 标题悬停效果 */
+h1:hover, h2:hover, h3:hover, h4:hover, h5:hover, h6:hover {
+    transform: var(--title-hover-lift);
+    text-shadow: var(--title-text-shadow);
+    color: var(--title-hover-color);
+}
+
+/* 一级标题 */
+h1 {
+    font-size: 3em;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+    font-weight: normal;
+    transition: all var(--transition-duration) ease 0.1s;
+    text-align: center;
+}
+
+/* 二级标题 */
+h2 {
+    font-weight: normal;
+    transition: all var(--transition-duration) ease 0.08s;
+    text-align: center;
+}
+
+h2:after {
+    border-bottom: 1px solid #2f2f2f;
+    content: '';
+    width: 100px;
+    display: block;
+    margin: 0.5em auto 0;
+    height: 1px;
+    transition: all var(--transition-duration) ease;
+}
+
+h2:hover:after {
+    width: 120px;
+    border-color: var(--title-hover-color);
+}
+
+/* 三级标题 */
+h3 {
+    font-weight: normal;
+    font-style: italic;
+    transition: all var(--transition-duration) ease 0.06s;
+    text-align: center;
+}
+
+/* 四级标题 */
+h4 {
+    font-size: 1.4em;
+    transition: all var(--transition-duration) ease 0.04s;
+}
+
+/* 五级标题 */
+h5 {
+    font-size: 1.2em;
+    transition: all var(--transition-duration) ease 0.02s;
+}
+
+/* 六级标题 */
+h6 {
+    font-size: 1.1em;
+    transition: all var(--transition-duration) ease;
+}
+
+/* 相邻标题间距优化 */
+h1+h2, h2+h3, h3+h4, h4+h5, h5+h6 {
+    margin-top: 0.6em;
+}
+
+/* 
+ * 段落与公式块样式
+ */
+p, .mathjax-block {
+    margin-top: 0;
+    -webkit-hypens: auto;
+    -moz-hypens: auto;
+    hyphens: auto;
+    transition: all var(--transition-duration) ease;
+    border-radius: var(--border-radius);
+    padding: 0.2em 0.5em;
+    margin: 0 -0.5em;
+}
+
+p:hover, .mathjax-block:hover {
+    background-color: var(--highlight-color);
+    box-shadow: var(--box-shadow);
+}
+
+/* 列表样式 */
+ul {
+    /*list-style: square;*/
+    padding-left: 1.2em;
+    line-height: 1.0;
+    margin-top: 0.3em;
+    margin-bottom: 0.3em;
+}
+
+ol {
+    padding-left: 1.2em;
+    line-height: 1.0;
+    margin-top: 0.3em;
+    margin-bottom: 0.3em;
+}
+
+li {
+    transition: all var(--transition-duration) ease;
+    border-radius: var(--border-radius);
+}
+
+li:hover {
+    box-shadow: var(--box-shadow);
+}
+
+@media print {
+    ol {
+        padding-left: 40px;
+    }
+}
+
+/* 引用块样式 */
+blockquote {
+    margin-left: 1em;
+    padding-left: 1em;
+    border-left: 1px solid #ddd;
+    transition: all var(--transition-duration) ease;
+    border-radius: var(--border-radius);
+}
+
+blockquote:hover {
+    background-color: var(--highlight-color);
+    box-shadow: var(--box-shadow);
+}
+
+/* 
+ * 代码相关样式
+ */
+code, pre {
+    font-family: "Consolas", "Menlo", "Monaco", monospace, serif;
+    font-size: .9em;
+    background: white;
+}
+
+.md-fences {
+    margin-left: 1em;
+    padding-left: 1em;
+    border: 1px solid #ddd;
+    padding-bottom: 8px;
+    padding-top: 5px;
+    margin-bottom: 1.5em;
+    border-radius: var(--border-radius);
+    transition: all var(--transition-duration) ease;
+}
+
+.md-fences:hover {
+    background-color: var(--highlight-color);
+    box-shadow: var(--box-shadow);
+}
+
+/* 
+ * 链接样式
+ */
+a {
+    color: #2484c1;
+    text-decoration: none;
+    transition: all var(--transition-duration) ease;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a img {
+    border: none;
+}
+
+h1 a, h1 a:hover {
+    color: #333;
+    text-decoration: none;
+}
+
+/* 
+ * 水平分割线样式
+ */
+hr {
+    color: #ddd;
+    height: 1px;
+    margin: 2em 0;
+    border-top: solid 1px #ddd;
+    border-bottom: none;
+    border-left: 0;
+    border-right: 0;
+}
+
+/* 
+ * 表格样式
+ */
+.ty-table-edit {
+    background: #ededed;
+    padding-top: 4px;
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
+}
+
+table {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 1.333333rem;
+    border-collapse: separate;
+    border-spacing: 0;
+    border: 0px solid #ddd;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+}
+
+tr:hover td {
+    background-color: var(--highlight-color);
+    box-shadow: var(--box-shadow);
+    transition: background-color var(--transition-duration) ease;
+}
+
+td {
+    position: relative;
+}
+
+td:before {
+    content: "";
+    position: absolute;
+    top: -100vh;
+    bottom: -100vh;
+    left: 0;
+    right: 0;
+    background-color: var(--highlight-color);
+    z-index: -1;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity var(--transition-duration) ease !important;
+}
+
+td:hover::before {
+    opacity: 1;
+}
+
+td:hover {
+    background-color: var(--highlight-color) !important;
+    box-shadow: 0 0 0 1px var(--shadow-color);
+    transition: all var(--transition-duration) ease;
+}
+
+table th, table td {
+    padding: 8px;
+    line-height: 1.333333rem;
+    vertical-align: top;
+    border-top: 1px solid #ddd;
+}
+
+table th {
+    font-weight: bold;
+}
+
+table thead th {
+    vertical-align: bottom;
+    font-weight: bold;
+    border-bottom: 1px solid #000;
+    border-top: 1px solid #ddd;
+    background-color: #f6f6f6;
+}
+
+table td:hover,
+table th:hover {
+    background-color: var(--highlight-color);
+    z-index: 1;
+}
+
+table tbody tr {
+    transition: all var(--transition-duration) ease;
+}
+
+table caption+thead tr:first-child th,
+table caption+thead tr:first-child td,
+table colgroup+thead tr:first-child th,
+table colgroup+thead tr:first-child td,
+table thead:first-child tr:first-child th,
+table thead:first-child tr:first-child td {
+    border-top: 0;
+}
+
+table tbody+tbody {
+    border-top: 2px solid #ddd;
+}
+
+/* 
+ * 任务列表
+ * 适配: <li><input><p>...</p></li>
+ */
+
+/* 确保列表项布局正常 */
+.md-task-list-item {
+    position: relative;
+    list-style: none;
+    margin: 0.3em 0;
+}
+
+/* 隐藏原生 checkbox，保留功能 */
+.md-task-list-item > input[type="checkbox"] {
+    opacity: 0;
+    position: absolute;
+    left: -25px;
+    top: 0.4em;
+    width: 1.4em;
+    height: 1.4em;
+    margin: 0;
+    cursor: pointer;
+    z-index: 1;
+}
+
+/* 未选中状态：画一个空心圆 ○ */
+.md-task-list-item > input[type="checkbox"] + p::before,
+.md-task-list-item > input[type="checkbox"][disabled] + p::before {
+    content: "";
+    display: inline-block;
+    width: 1.15em;
+    height: 1.15em;
+    border: 2px solid #aaa;
+    border-radius: 50%;
+    margin-right: 0.4em;
+    vertical-align: -0.1em;
+    position: absolute;
+    left: -25px;
+    top: 0.4em;
+    background-color: white;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+    z-index: 0;
+}
+
+/* 选中状态：蓝色实心圆 + 白色✔ */
+.md-task-list-item > input[type="checkbox"]:checked + p::before,
+.md-task-list-item > input[type="checkbox"][disabled][checked] + p::before {
+    border-color: #2484c1;
+    background-color: #2484c1;
+}
+
+.md-task-list-item > input[type="checkbox"]:checked + p::after,
+.md-task-list-item > input[type="checkbox"][disabled][checked] + p::after {
+    content: "✔";
+    display: inline-block;
+    width: 1.2em;
+    height: 1.2em;
+    line-height: 1.2em;
+    text-align: center;
+    color: white;
+    font-size: 0.9em;
+    font-weight: bold;
+    position: absolute;
+    left: -25px;
+    top: 0.4em;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.md-tag {
+    color: inherit;
+    font: inherit;
+}
+
+/* 
+ * 元信息块样式
+ */
+#write pre.md-meta-block {
+    min-height: 35px;
+    padding: 0.5em 1em;
+    white-space: pre;
+    background: #f8f8f8;
+    border: 0px;
+    color: #999;
+    width: 100vw;
+    max-width: calc(100% + 60px);
+    margin-left: -30px;
+    border-left: 30px #f8f8f8 solid;
+    border-right: 30px #f8f8f8 solid;
+    margin-bottom: 2em;
+    margin-top: -1.3333333333333rem;
+    padding-top: 26px;
+    padding-bottom: 10px;
+    line-height: 1.8em;
+    font-size: 0.9em;
+    font-size: 0.76em;
+    padding-left: 0;
+}
+
+.md-img-error.md-image>.md-meta {
+    vertical-align: bottom;
+}
+
+#write>h5.md-focus:before {
+    top: 2px;
+}
+
+/* 
+ * 目录样式
+ */
+.md-toc {
+    margin-top: 40px;
+}
+
+.md-toc-content {
+    padding-bottom: 20px;
+}
+
+.outline-expander:before {
+    color: inherit;
+    font-size: 14px;
+    top: auto;
+    content: "\f0da";
+    font-family: FontAwesome;
+}
+
+.outline-expander:hover:before,
+.outline-item-open>.outline-item>.outline-expander:before {
+    content: "\f0d7";
+}
+
+/* 
+ * 源码模式样式
+ */
+#typora-source {
+    font-family: Courier, monospace;
+    color: #6A6A6A;
+}
+
+.html-for-mac #typora-sidebar {
+    -webkit-box-shadow: 0 5px 12px rgba(0, 0, 0, .175);
+    box-shadow: 0 5px 12px rgba(0, 0, 0, .175);
+}
+
+.cm-s-typora-default .cm-header, 
+.cm-s-typora-default .cm-property,
+.CodeMirror.cm-s-typora-default div.CodeMirror-cursor {
+    color: #428bca;
+}
+
+.cm-s-typora-default .cm-atom, 
+.cm-s-typora-default .cm-number {
+    color: #777777;
+}
+
+.typora-node .file-list-item-parent-loc, 
+.typora-node .file-list-item-time, 
+.typora-node .file-list-item-summary {
+    font-family: arial, sans-serif;
+}
+
+.md-task-list-item>input {
+    margin-left: -1.3em;
+    margin-top: calc(1rem - 12px);
+}
+
+.md-mathjax-midline {
+    background: #fafafa;
+}
+
+.md-fences .code-tooltip {
+    bottom: -2em !important;
+}
+
+.dropdown-menu .divider {
+    border-color: #e5e5e5;
+}
+
+/* 参考式链接样式 */
+.md-def-link {
+    transition: all var(--transition-duration) ease;
+    border-radius: var(--border-radius);
+    padding: 0.1em 0.3em;
+}
+
+.md-def-link:hover {
+    background-color: var(--highlight-color);
+    box-shadow: var(--box-shadow);
+}
+
+.md-def-name {
+    color: #2484c1;
+    text-decoration: none;
+}
+
+.md-def-url {
+    color: #666;
+    font-family: "Consolas", monospace;
+    font-size: 0.9em;
+}
+
+.md-def-title {
+    color: #888;
+    font-style: italic;
+}
+
+/* 
+ * 特殊块样式 (Note, Tip, Important, Warning, Caution)
+ */
+.md-alert.md-alert-note,
+.md-alert.md-alert-tip,
+.md-alert.md-alert-important,
+.md-alert.md-alert-warning,
+.md-alert.md-alert-caution {
+    border-left: 4px solid #ddd;
+    padding: 0.8em 1em;
+    margin: 1em 0;
+    border-radius: var(--border-radius);
+    transition: all var(--transition-duration) ease;
+    background-color: rgba(0, 0, 0, 0.02);
+}
+
+/* Note块样式 */
+.md-alert.md-alert-note {
+    border-left-color: #428bca;
+    background-color: rgba(66, 139, 202, 0.05);
+}
+
+/* Tip块样式 */
+.md-alert.md-alert-tip {
+    border-left-color: #5cb85c;
+    background-color: rgba(85, 204, 187, 0.05);
+}
+
+/* Important块样式 */
+.md-alert.md-alert-important {
+    border-left-color: #aa5bff;
+    background-color: rgba(170, 91, 255, 0.05);
+}
+
+/* Warning块样式 */
+.md-alert.md-alert-warning {
+    border-left-color: #f0ad4e;
+    background-color: rgba(240, 173, 78, 0.05);
+}
+
+/* Caution块样式 */
+.md-alert.md-alert-caution {
+    border-left-color: #d9534f;
+    background-color: rgba(217, 83, 79, 0.05);
+}
+
+/* 特殊块悬停效果 */
+.md-alert:hover {
+    box-shadow: var(--box-shadow);
+    transform: translateY(-1px);
+}
