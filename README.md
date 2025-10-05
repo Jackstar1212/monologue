@@ -54,7 +54,7 @@ Elegant and formal Source Serif typeface
 
 ![7](https://github.com/Jackstar1212/monologue/blob/main/theme_introduction/7.png)
 
-### 公式、引用及代码格式 Formulas, citation and code formats
+#### 公式、引用及代码格式 Formulas, citation and code formats
 
 ![8](https://github.com/Jackstar1212/monologue/blob/main/theme_introduction/8.png)
 
