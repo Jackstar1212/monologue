@@ -18,45 +18,45 @@ Elegant and formal serif typeface, each line accompanied by exquisite fade-in an
 
 Elegant and formal Source Serif typeface
 
-![1](.\theme_introduction\1.png)
+![1](https://github.com/Jackstar1212/monologue/theme_introduction/1.png)
 
 
 
 ### 淡入淡出动画 Fade-in and fade-out animations
 
-![2](.\theme_introduction\2.png)
+![2](https://github.com/Jackstar1212/monologue/theme_introduction/2.png)
 
 
 
 ### 带定位效果的表格设计 Table design with positioning effects
 
-![3](.\theme_introduction\3.png)
+![3](https://github.com/Jackstar1212/monologue/theme_introduction/3.png)
 
 
 
 ### 标题悬浮动效 Floating title animations
 
-![4](.\theme_introduction\4.png)
+![4](https://github.com/Jackstar1212/monologue/theme_introduction/4.png)
 
 
 
 ### 特殊块样式 Special block styles
 
-![5](.\theme_introduction\5.png)
+![5](https://github.com/Jackstar1212/monologue/theme_introduction/5.png)
 
 ### 其他效果 Other effects
 
 #### 格式效果 Format effects
 
-![6](.\theme_introduction\6.png)
+![6](https://github.com/Jackstar1212/monologue/theme_introduction/6.png)
 
 #### 任务列表 Task list
 
-![7](.\theme_introduction\7.png)
+![7](https://github.com/Jackstar1212/monologue/theme_introduction/7.png)
 
 ### 公式、引用及代码格式 Formulas, citation and code formats
 
-![8](.\theme_introduction\8.png)
+![8](https://github.com/Jackstar1212/monologue/theme_introduction/8.png)
 
 
 
