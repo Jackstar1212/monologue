@@ -720,7 +720,7 @@ table thead:first-child tr:first-child td {
 
 .file-list-item.active {
     background-color: var(--highlight-color);
-    color: var(--accent-white);
+    color: var(--text-primary);
     border-left-color: var(--accent-white);
 }
 
