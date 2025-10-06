@@ -4,6 +4,19 @@ Monologue 是一个精美、优雅、干净的 typora 主题。它可以让你�
 
 Monologue is an elegant, exquisite, and clean Typora theme. It allows you to focus on writing itself and delight in the joy of Markdown editing.
 
+![0](https://github.com/Jackstar1212/monologue/blob/main/theme_introduction/0.png)
+
+Monologue 是 Nocturne 的明亮主题。
+
+Monologue is the light theme of Nocturne.
+
+
+
+想要深色主题？你可以在这里访问 Nocturne 页面：[nocturne](https://github.com/Jackstar1212/nocturne)
+
+
+Want a dark theme? You can access Nocturne page here: [nocturne](https://github.com/Jackstar1212/nocturne)
+
 ## 特性 Features
 
 优雅正式的衬线体、每一行都伴有精美的淡入淡出动画、带定位效果的表格设计、特殊的标题悬浮动效以及配色舒适的特殊块 (Note, Tip, Important, Warning, Caution) 样式。
