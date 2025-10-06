@@ -272,7 +272,7 @@ input,
 select,
 textarea,
 div.code-tooltip-content {
-    color: var(--text-color);
+    color: var(--accent-white);
     border-color: transparent;
 }
 
