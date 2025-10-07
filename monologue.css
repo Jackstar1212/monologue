@@ -150,11 +150,11 @@
 }
 
 .cm-s-typora-default .cm-link {
-    color: #95B94B;
+    color: var(--primary-color);
 }
 
 .cm-s-typora-default .CodeMirror-activeline-background {
-    background: rgba(15, 24, 38, 0.72);
+    background: var(--accent-light-grey);
 }
 
 .cm-s-typora-default .cm-comment, .cm-s-typora-default .cm-code {
@@ -182,7 +182,7 @@
     --active-file-text-color: #333333;
     --item-hover-text-color: #333333;
     
-    --rawblock-edit-panel-bd: #f8f8f8;
+    --rawblock-edit-panel-bd: #d8d8d8;
     
     --search-select-bg-color: #428bca;
     
@@ -412,7 +412,7 @@ p:hover, .mathjax-block:hover {
 /* 列表样式 */
 ul {
     padding-left: 1.2em;
-    line-height: 1.0;
+    line-height: 1.5;
     margin-top: 0.3em;
     margin-bottom: 0.3em;
 }
@@ -461,8 +461,9 @@ blockquote:hover {
 code, pre, kbd, tt, var {
     font-family: "Consolas", "Menlo", "Monaco", monospace, serif;
     font-size: 0.9em;
-    background: var(--bg-secondary);
+    background: var(--rawblock-edit-panel-bd);
     color: var(--text-primary);
+    border-radius: var(--border-radius);
 }
 
 .md-fences {
@@ -483,13 +484,13 @@ code, pre, kbd, tt, var {
 
 /* 链接样式 */
 a {
-    color: var(--accent-white);
+    color: var(--accent-dark-grey);
     text-decoration: none;
     transition: all var(--transition-duration) ease;
 }
 
 a:hover {
-    color: #88ffe1;
+    color: var(--primary-color);
     text-decoration: underline;
 }
 
