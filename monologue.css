@@ -23,7 +23,7 @@
 }
 
 .cm-s-inner .cm-tag {
-    color: #7DF46A;
+    color: #337662;
 }
 
 .cm-s-inner .cm-attribute {
@@ -962,4 +962,5 @@ footer.ty-footer {
 }
 #typora-sidebar:hover div.sidebar-content-content::-webkit-scrollbar-thumb:horizontal:active {
   background: var(--scrollbar-active-color);
+
 }
